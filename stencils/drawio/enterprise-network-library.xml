@@ -1,0 +1,10 @@
+<mxlibrary>[
+{"xml":"<mxCell id='area_internet' value='Internet' style='rounded=1;whiteSpace=wrap;html=1;fillColor=#ECECEC;strokeColor=#B0B0B0;' vertex='1' parent='1'><mxGeometry width='160' height='70' as='geometry'/></mxCell>","w":160,"h":70},
+{"xml":"<mxCell id='area_external' value='External Networks' style='rounded=1;whiteSpace=wrap;html=1;fillColor=#EFE2D0;strokeColor=#C9B79C;' vertex='1' parent='1'><mxGeometry width='190' height='70' as='geometry'/></mxCell>","w":190,"h":70},
+{"xml":"<mxCell id='area_campus' value='Campus' style='rounded=1;whiteSpace=wrap;html=1;fillColor=#DDE7D8;strokeColor=#A9B89F;' vertex='1' parent='1'><mxGeometry width='160' height='70' as='geometry'/></mxCell>","w":160,"h":70},
+{"xml":"<mxCell id='area_dc' value='Data Center' style='rounded=1;whiteSpace=wrap;html=1;fillColor=#DDECCF;strokeColor=#98B27A;' vertex='1' parent='1'><mxGeometry width='170' height='80' as='geometry'/></mxCell>","w":170,"h":80},
+{"xml":"<mxCell id='area_cloud' value='Company Cloud' style='rounded=1;whiteSpace=wrap;html=1;fillColor=#DCE7F5;strokeColor=#9EB6D8;' vertex='1' parent='1'><mxGeometry width='180' height='80' as='geometry'/></mxCell>","w":180,"h":80},
+{"xml":"<mxCell id='zone_dmz' value='DMZ' style='rounded=1;whiteSpace=wrap;html=1;fillColor=#F3D7C8;strokeColor=#D69A7A;' vertex='1' parent='1'><mxGeometry width='130' height='55' as='geometry'/></mxCell>","w":130,"h":55},
+{"xml":"<mxCell id='zone_restricted' value='Restricted' style='rounded=1;whiteSpace=wrap;html=1;fillColor=#F5EACF;strokeColor=#D8BF7A;' vertex='1' parent='1'><mxGeometry width='150' height='55' as='geometry'/></mxCell>","w":150,"h":55},
+{"xml":"<mxCell id='zone_trusted' value='Trusted Internal' style='rounded=1;whiteSpace=wrap;html=1;fillColor=#DDECCF;strokeColor=#98B27A;' vertex='1' parent='1'><mxGeometry width='170' height='55' as='geometry'/></mxCell>","w":170,"h":55}
+]</mxlibrary>

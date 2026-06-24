@@ -1,0 +1,6 @@
+Area,Description,Fill,Border
+Internet,Public uncontrolled network,#ECECEC,#B0B0B0
+External Networks,Third-party networks via VPN/leased/private connectivity,#EFE2D0,#C9B79C
+Campus,"Company offices, HQ, branches and facilities",#DDE7D8,#A9B89F
+Data Center,Company-owned on-prem infrastructure,#DDECCF,#98B27A
+Company Cloud,Company-managed Azure cloud infrastructure,#DCE7F5,#9EB6D8

@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Draw.io backups
+*.bkp
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo

@@ -1,0 +1,7 @@
+Actor,Description,Typical_Location
+Customers / Clients,Consume public-facing services,Internet
+Partners,External organizations connected through External Networks,External Networks
+Campus Workers,Employees on wired LAN or corporate WiFi,Campus
+Remote Workers,Employees outside company facilities using VPN or VDI,Internet
+Administrators,"Infrastructure, platform and security admins",Campus / Internet
+Guests,Non-employees requiring temporary connectivity,Campus

@@ -1,0 +1,11 @@
+flowchart TB
+    Internet[Internet / External Networks]
+    DMZ[DMZ\nIngress protection and exposure buffer]
+    Restricted[Restricted\nExternally consumed anonymous/authenticated services]
+    Internal[Trusted Internal\nCore business applications and data]
+    MGMT[MGMT/OOB\nPrivileged management plane]
+
+    Internet --> DMZ --> Restricted --> Internal
+    MGMT -. controlled admin access .-> DMZ
+    MGMT -. controlled admin access .-> Restricted
+    MGMT -. controlled admin access .-> Internal

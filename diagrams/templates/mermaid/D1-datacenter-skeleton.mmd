@@ -1,0 +1,12 @@
+flowchart LR
+    subgraph DC["Data Center"]
+        ACI["Cisco ACI Spine/Leaf Fabric"]
+        DMZ["DMZ"]
+        REZ["Restricted"]
+        INT["Trusted Internal"]
+        OOB["MGMT/OOB"]
+        LAB["Lab / NONPROD"]
+    end
+    DMZ --- REZ --- INT
+    OOB --- ACI
+    LAB --- ACI

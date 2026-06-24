@@ -1,0 +1,14 @@
+sequenceDiagram
+    actor User
+    participant WAF as Web Application Firewall
+    participant App as Web Application
+    participant IdP as Identity Provider
+    participant DB as Database
+
+    User->>WAF: HTTPS / 443 / Access application
+    WAF->>App: HTTPS / 443 / Forward request
+    App->>IdP: OIDC / 443 / Authenticate user
+    IdP-->>App: Token / Claims
+    App->>DB: DB Protocol / Port / Read-write data
+    DB-->>App: Query response
+    App-->>User: Application response

@@ -1,0 +1,8 @@
+Zone,Description,Exposure,Fill,Border
+DMZ,High-exposure edge/buffer zone,High,#F3D7C8,#D69A7A
+Restricted,Controlled externally consumed services,Medium,#F5EACF,#D8BF7A
+Trusted Internal,Protected internal workloads,Low,#DDECCF,#98B27A
+Guest,Isolated guest/temporary access,Medium/High,#F3E2D6,#D7A88C
+Facility,Building/facility and IoT systems,Medium,#EADCBF,#C6A56D
+MGMT/OOB,Privileged management and out-of-band zone,Administrative,#E8DDF0,#B59BC7
+Lab,Isolated NONPROD test laboratory,Controlled,#DDF0E8,#9CC6B2

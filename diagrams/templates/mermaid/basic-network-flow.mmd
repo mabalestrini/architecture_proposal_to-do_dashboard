@@ -1,0 +1,11 @@
+flowchart LR
+    Internet[Internet / External User]
+    FW[Edge Firewall]
+    WAF[Web Application Firewall]
+    APP[Web Application]
+    DB[(Database)]
+
+    Internet -->|HTTPS / 443 / User access| FW
+    FW -->|HTTPS / 443 / Forward to WAF| WAF
+    WAF -->|HTTPS / 443 / Reverse proxy| APP
+    APP -->|PostgreSQL / 5432 / App data| DB

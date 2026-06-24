@@ -1,0 +1,11 @@
+flowchart LR
+    subgraph CAMPUS["Campus"]
+        USERS["Campus Workers"]
+        TRUST["Trust Zone"]
+        GUEST["Guest Zone"]
+        FAC["Facility Zone"]
+        WIFI["WiFi / Wired LAN"]
+    end
+    USERS --> TRUST
+    GUEST --- WIFI
+    FAC --- WIFI

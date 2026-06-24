@@ -1,0 +1,46 @@
+architecture:
+  name: "[Project Name] Reference Architecture"
+  version: draft-v1.0
+  primary_tool: drawio
+  secondary_tool: visio
+
+# Define the areas relevant to this project
+areas:
+  - "[Area 1]"
+  - "[Area 2]"
+
+# Define the actors relevant to this project
+actors:
+  - "[Actor 1]"
+  - "[Actor 2]"
+
+# Standard zone taxonomy — keep or extend as needed
+zones:
+  - DMZ
+  - Restricted
+  - Trusted Internal
+  - Guest
+  - Facility
+  - MGMT/OOB
+  - Lab
+
+environments:
+  - PROD
+  - NONPROD
+
+# Standard segmentation mechanisms — update to match project
+segmentation_mechanisms:
+  - Firewalls
+  - VRFs
+  - Routing controls
+
+# Architecture layers — fixed framework, do not rename
+layers:
+  L0: Context
+  L1: Infrastructure Topology
+  L2: Network Segmentation
+  L3: Connectivity
+  L4: Security Controls
+  L5: Service Architecture
+  L6: Identity & Access
+  L7: Resilience & Operations

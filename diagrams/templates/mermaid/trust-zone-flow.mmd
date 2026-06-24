@@ -1,0 +1,22 @@
+flowchart LR
+    subgraph ZONE_INTERNET[Internet / Untrusted]
+        USER[End User]
+    end
+
+    subgraph ZONE_DMZ[DMZ]
+        FW[Edge Firewall]
+        WAF[WAF]
+    end
+
+    subgraph ZONE_APP[Application Zone]
+        APP[Application Service]
+    end
+
+    subgraph ZONE_DATA[Data Zone]
+        DB[(Database)]
+    end
+
+    USER -->|HTTPS / 443| FW
+    FW -->|HTTPS / 443| WAF
+    WAF -->|HTTPS / 443| APP
+    APP -->|DB protocol / port| DB

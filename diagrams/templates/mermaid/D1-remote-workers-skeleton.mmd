@@ -1,0 +1,13 @@
+flowchart LR
+    RW["Remote Workers"]
+    INTERNET["Internet"]
+    PRISMA["Prisma VPN / Secure Web Proxy"]
+    VDI["VDI / AVD in Company Cloud"]
+    DC["Data Center"]
+    CLOUD["Company Cloud"]
+
+    RW --> INTERNET
+    INTERNET --- PRISMA
+    PRISMA --- DC
+    INTERNET --- VDI
+    VDI --- CLOUD

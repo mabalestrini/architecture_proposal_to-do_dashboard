@@ -1,0 +1,18 @@
+flowchart LR
+    subgraph Campus[Campus Area]
+        subgraph Trust[Trust Zone in Campus Area]
+            Users[Users]
+            Printers[Printers]
+            LocalServers[Local Servers]
+        end
+        subgraph Facility[Facility]
+            Clocks[Time Clocks]
+            Rooms[Room Managers]
+            Security[Security Devices]
+        end
+        subgraph Guest[Guest]
+            ExtGuests[External Guests]
+            IntGuests[Internal Guests]
+            IoTUC[IoT or UC Guest]
+        end
+    end

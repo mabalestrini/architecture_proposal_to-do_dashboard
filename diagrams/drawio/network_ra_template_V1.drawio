@@ -1,0 +1,140 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="O4XPxAnPe12hEIIwSzJ8">
+    <mxGraphModel dx="1826" dy="982" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FRAME_LEFT" parent="1" style="swimlane;startSize=20;fillColor=none;strokeColor=#000000;strokeWidth=1;fontStyle=1;fontSize=11;fontColor=#000000;rounded=0;whiteSpace=wrap;" value="Diagram" vertex="1">
+          <mxGeometry height="760" width="770" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DEMO_AREA" parent="FRAME_LEFT" style="swimlane;startSize=24;fillColor=#DDECCF;strokeColor=#7AA85A;fontStyle=1;fontSize=11;fontColor=#333333;rounded=1;arcSize=3;" value="Data Center" vertex="1">
+          <mxGeometry height="200" width="400" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DEMO_ZONE" parent="DEMO_AREA" style="swimlane;startSize=18;fillColor=#F3D7C8;strokeColor=#D4896A;fontSize=10;fontColor=#333333;rounded=1;arcSize=4;" value="DMZ" vertex="1">
+          <mxGeometry height="120" width="160" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DEMO_FW" parent="DEMO_ZONE" style="shape=mxgraph.cisco.firewalls.firewall;fillColor=#F3D7C8;strokeColor=#D4896A;fontSize=9;fontColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="Internet FW&#xa;(Palo Alto HA)" vertex="1">
+          <mxGeometry height="40" width="40" x="60" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DEMO_CORE" parent="DEMO_AREA" style="shape=mxgraph.cisco.switches.workgroup_switch;fillColor=#DDECCF;strokeColor=#7AA85A;fontSize=9;fontColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="Core Switch&#xa;(ACI Spine)" vertex="1">
+          <mxGeometry height="40" width="40" x="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DEMO_EDGE" edge="1" parent="DEMO_AREA" source="DEMO_FW" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#444444;strokeWidth=2;fontSize=8;" target="DEMO_CORE" value="VLAN / * / Segmented">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FRAME_RIGHT" parent="1" style="swimlane;startSize=20;fillColor=none;strokeColor=#000000;strokeWidth=1;fontStyle=1;fontSize=11;fontColor=#000000;rounded=0;whiteSpace=wrap;" value="Key Points / Legend" vertex="1">
+          <mxGeometry height="762" width="300" x="820" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="LBL_AREAS" parent="1" style="text;html=1;fontStyle=1;fontSize=9;fontColor=#555555;align=left;" value="AREAS" vertex="1">
+          <mxGeometry height="16" width="80" x="842" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="LBL_ZONES" parent="1" style="text;html=1;fontStyle=1;fontSize=9;fontColor=#555555;align=left;" value="ZONES" vertex="1">
+          <mxGeometry height="16" width="80" x="842" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="LBL_ACTORS" parent="1" style="text;html=1;fontStyle=1;fontSize=9;fontColor=#555555;align=left;" value="ACTORS" vertex="1">
+          <mxGeometry height="16" width="80" x="842" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="LBL_COMP" parent="1" style="text;html=1;fontStyle=1;fontSize=9;fontColor=#555555;align=left;" value="COMPONENTS" vertex="1">
+          <mxGeometry height="16" width="100" x="842" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="AREA_INET" parent="1" style="swimlane;startSize=22;fillColor=#ECECEC;strokeColor=#AAAAAA;fontStyle=1;fontSize=10;fontColor=#333333;rounded=1;arcSize=4;" value="Internet" vertex="1">
+          <mxGeometry height="30" width="261" x="842" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="AREA_EXT" parent="1" style="swimlane;startSize=22;fillColor=#EFE2D0;strokeColor=#C4A882;fontStyle=1;fontSize=10;fontColor=#333333;rounded=1;arcSize=4;" value="External Networks" vertex="1">
+          <mxGeometry height="30" width="261" x="842" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="AREA_CAMPUS" parent="1" style="swimlane;startSize=22;fillColor=#DDE7D8;strokeColor=#8AAF84;fontStyle=1;fontSize=10;fontColor=#333333;rounded=1;arcSize=4;" value="Campus" vertex="1">
+          <mxGeometry height="30" width="261" x="842" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="AREA_DC" parent="1" style="swimlane;startSize=22;fillColor=#DDECCF;strokeColor=#7AA85A;fontStyle=1;fontSize=10;fontColor=#333333;rounded=1;arcSize=4;" value="Data Center" vertex="1">
+          <mxGeometry height="30" width="261" x="842" y="204" as="geometry" />
+        </mxCell>
+        <mxCell id="AREA_CLOUD" parent="1" style="swimlane;startSize=22;fillColor=#DCE7F5;strokeColor=#6A93C8;fontStyle=1;fontSize=10;fontColor=#333333;rounded=1;arcSize=4;" value="Company Cloud" vertex="1">
+          <mxGeometry height="30" width="261" x="842" y="244" as="geometry" />
+        </mxCell>
+        <mxCell id="ZONE_DMZ" parent="1" style="rounded=1;arcSize=6;fillColor=#F3D7C8;strokeColor=#D4896A;fontSize=10;fontColor=#333333;" value="DMZ" vertex="1">
+          <mxGeometry height="28" width="120" x="842" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="ZONE_REST" parent="1" style="rounded=1;arcSize=6;fillColor=#F5EACF;strokeColor=#C8A84B;fontSize=10;fontColor=#333333;" value="Restricted" vertex="1">
+          <mxGeometry height="28" width="120" x="974" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="ZONE_TRUST" parent="1" style="rounded=1;arcSize=6;fillColor=#DDECCF;strokeColor=#7AA85A;fontSize=10;fontColor=#333333;" value="Trusted Internal" vertex="1">
+          <mxGeometry height="28" width="120" x="842" y="322" as="geometry" />
+        </mxCell>
+        <mxCell id="ZONE_GUEST" parent="1" style="rounded=1;arcSize=6;fillColor=#F3E2D6;strokeColor=#C89A6A;fontSize=10;fontColor=#333333;" value="Guest" vertex="1">
+          <mxGeometry height="28" width="120" x="974" y="322" as="geometry" />
+        </mxCell>
+        <mxCell id="ZONE_FAC" parent="1" style="rounded=1;arcSize=6;fillColor=#EADCBF;strokeColor=#B8994A;fontSize=10;fontColor=#333333;" value="Facility" vertex="1">
+          <mxGeometry height="28" width="120" x="842" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZONE_OOB" parent="1" style="rounded=1;arcSize=6;fillColor=#E8DDF0;strokeColor=#9B7BC8;fontSize=10;fontColor=#333333;" value="MGMT / OOB" vertex="1">
+          <mxGeometry height="28" width="120" x="974" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZONE_LAB" parent="1" style="rounded=1;arcSize=6;fillColor=#DDF0E8;strokeColor=#5AAF8A;fontSize=10;fontColor=#333333;" value="Lab" vertex="1">
+          <mxGeometry height="28" width="120" x="842" y="398" as="geometry" />
+        </mxCell>
+        <mxCell id="ACT_USER" parent="1" style="ellipse;fillColor=#FFFFFF;strokeColor=#AAAAAA;fontSize=10;fontColor=#333333;" value="User / Endpoint" vertex="1">
+          <mxGeometry height="40" width="120" x="842" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="ACT_PARTNER" parent="1" style="ellipse;fillColor=#FFFFFF;strokeColor=#C4A882;fontSize=10;fontColor=#333333;" value="External Partner" vertex="1">
+          <mxGeometry height="40" width="120" x="974" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="ACT_INET" parent="1" style="ellipse;fillColor=#FFFFFF;strokeColor=#888888;fontSize=10;fontColor=#333333;dashed=1;" value="Internet Actor" vertex="1">
+          <mxGeometry height="40" width="120" x="842" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="COMP_LB" parent="1" style="shape=mxgraph.network.load_balancer;fillColor=#DDECCF;strokeColor=#7AA85A;fontSize=9;fontColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="Load Balancer" vertex="1">
+          <mxGeometry height="40" width="40" x="842" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="COMP_FW" parent="1" style="shape=mxgraph.cisco.firewalls.firewall;fillColor=#F3D7C8;strokeColor=#D4896A;fontSize=9;fontColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="Firewall" vertex="1">
+          <mxGeometry height="40" width="40" x="892" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="COMP_VPN" parent="1" style="shape=mxgraph.cisco.routers.vpn_concentrator;fillColor=#ECECEC;strokeColor=#AAAAAA;fontSize=9;fontColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="VPN Concentrator" vertex="1">
+          <mxGeometry height="40" width="40" x="942" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="COMP_RTR" parent="1" style="shape=mxgraph.cisco.routers.router;fillColor=#EFE2D0;strokeColor=#C4A882;fontSize=9;fontColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="Router" vertex="1">
+          <mxGeometry height="40" width="40" x="992" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="COMP_SW" parent="1" style="shape=mxgraph.cisco.switches.workgroup_switch;fillColor=#DDECCF;strokeColor=#7AA85A;fontSize=9;fontColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="Switch" vertex="1">
+          <mxGeometry height="40" width="40" x="1042" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="COMP_HV" parent="1" style="shape=mxgraph.cisco.servers.standard_server;fillColor=#DDECCF;strokeColor=#7AA85A;fontSize=9;fontColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="Hyper-V Host" vertex="1">
+          <mxGeometry height="40" width="40" x="842" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="COMP_WIFI" parent="1" style="shape=mxgraph.cisco.wireless.wireless_access_point;fillColor=#DDE7D8;strokeColor=#8AAF84;fontSize=9;fontColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="WiFi Hotspot" vertex="1">
+          <mxGeometry height="40" width="40" x="892" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="LBL_CONN" parent="1" style="text;html=1;fontStyle=1;fontSize=9;fontColor=#555555;align=left;" value="CONNECTORS" vertex="1">
+          <mxGeometry height="16" width="100" x="842" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="CONN_DATA" edge="1" parent="1" style="edgeStyle=none;strokeColor=#444444;strokeWidth=2;endArrow=block;endFill=1;" value="">
+          <mxGeometry relative="1" x="766" y="712" as="geometry">
+            <Array as="points" />
+            <mxPoint x="842" y="714" as="sourcePoint" />
+            <mxPoint x="902" y="714" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CONN_DATA_LBL" parent="1" style="text;html=1;fontSize=8;fontColor=#333333;align=left;" value="Data plane" vertex="1">
+          <mxGeometry height="14" width="80" x="906" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="CONN_MGMT" edge="1" parent="1" style="edgeStyle=none;strokeColor=#7A5BA8;strokeWidth=1.5;dashed=1;endArrow=block;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="842" y="730" as="sourcePoint" />
+            <mxPoint x="902" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CONN_MGMT_LBL" parent="1" style="text;html=1;fontSize=8;fontColor=#333333;align=left;" value="Mgmt (in-band)" vertex="1">
+          <mxGeometry height="14" width="80" x="906" y="724" as="geometry" />
+        </mxCell>
+        <mxCell id="CONN_ENC" edge="1" parent="1" style="edgeStyle=none;strokeColor=#2E6B4F;strokeWidth=2;endArrow=block;endFill=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="842" y="746" as="sourcePoint" />
+            <mxPoint x="902" y="746" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CONN_ENC_LBL" parent="1" style="text;html=1;fontSize=8;fontColor=#333333;align=left;" value="Encrypted" vertex="1">
+          <mxGeometry height="14" width="80" x="906" y="740" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

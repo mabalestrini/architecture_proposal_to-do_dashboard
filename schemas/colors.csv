@@ -1,0 +1,10 @@
+Semantic,Type,Fill,Border,Notes
+Internet,Area,#ECECEC,#B0B0B0,Area identity
+External Networks,Area,#EFE2D0,#C9B79C,Area identity
+Campus,Area,#DDE7D8,#A9B89F,Area identity
+Data Center,Area,#DDECCF,#98B27A,Area identity
+Company Cloud,Area,#DCE7F5,#9EB6D8,Area identity
+Low Exposure,Zone,#DDECCF,#98B27A,Green family
+Medium Exposure,Zone,#F5EACF,#D8BF7A,Yellow family
+High Exposure,Zone,#F3D7C8,#D69A7A,Orange family
+Administrative Exposure,Zone,#E8DDF0,#B59BC7,Lavender family

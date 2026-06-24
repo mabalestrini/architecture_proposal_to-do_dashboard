@@ -1,0 +1,25 @@
+flowchart LR
+    subgraph Campus[Campus / Branches]
+        HQ[HQ]
+        BR[Domestic Branches]
+        OFF[Offshore Offices]
+    end
+
+    subgraph DC[Mirrored Data Centers]
+        DC1[Data Center 1\nActive or Standby]
+        DC2[Data Center 2\nActive or Standby]
+    end
+
+    subgraph Azure[Company Cloud - Azure]
+        AZ1[Azure Region 1]
+        AZ2[Azure Region 2]
+    end
+
+    HQ ---|Redundant MPLS| DC1
+    BR ---|Redundant MPLS| DC1
+    OFF ---|Cisco Meraki| DC1
+
+    DC1 <-->|DWDM Orange / Arcadiz\nWKS DATA SAN INT| DC2
+    DC1 ---|ExpressRoute| AZ1
+    DC2 ---|ExpressRoute| AZ2
+    AZ1 <-->|Mirrored Cloud Infra| AZ2
