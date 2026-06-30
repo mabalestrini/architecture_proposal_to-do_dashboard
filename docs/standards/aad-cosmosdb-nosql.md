@@ -301,3 +301,65 @@ Each Cosmos DB workload must maintain a **JSON Schema contract** describing expe
 - Is descriptive, not enforced by the database.
 - Serves as the source for the **PII field registry** used in the scrambling pipeline.
 - Must be maintained in the AG enterprise data catalog.
+
+---
+
+## 12. Known gaps and open points
+
+> This section documents identified gaps in the current version of this AAD. These should be resolved before or during ITAB validation. Items are grouped by priority.
+
+### Document status notes
+
+- This AAD is **Draft — pending ITAB validation**. It is not yet an enforced standard.
+- The reviewer comment on the "Lifecycle status" attribute (`Commented [AG1]` in the source PDF) is **unresolved** — the attribute and its allowed values have not yet been approved by ITAB.
+- **Contact and Subject Matter Expert fields are blank** in the document control section and must be filled before formal publication.
+- A **throughput selection logic diagram** referenced in section 7 of the source PDF did not transfer to text — the decision tree for choosing throughput mode is absent from this document.
+- The **RACI table** (section 11) was a visual colour-coded table in the source PDF; the version above is a best-effort text reconstruction and should be verified against the original.
+
+---
+
+### High priority gaps
+
+**1. Consistency levels — no guidance provided.**
+Cosmos DB offers five consistency levels (Strong, Bounded Staleness, Session, Consistent Prefix, Eventual), each with direct implications on latency, cost, and data correctness. This is one of the most consequential design decisions when deploying Cosmos DB and the AAD does not address it at all. Guidance needed: which levels are approved per use case, which is the default recommendation, and which are restricted.
+
+**2. Conflict resolution for multi-region writes.**
+"Globally distributed operational data" with active-active writes is an approved use case, but the document does not address conflict resolution policies. When two regions write to the same item concurrently, a resolution strategy must be defined — either Last Write Wins (LWW, configurable by timestamp property) or a custom merge procedure. This must be specified for any workload using multi-region writes.
+
+**3. Audit logging and diagnostic settings.**
+Despite a strong security baseline (CMK, RBAC, private endpoints), the document contains no requirements for Cosmos DB diagnostic logs. Missing guidance: which log categories must be enabled (DataPlaneRequests, ControlPlaneRequests, QueryRuntimeStatistics, etc.), which Log Analytics workspace they must be sent to, and who is accountable for enabling and maintaining them.
+
+**4. DRP testing requirements — referenced but empty.**
+Section 2 lists DRP testing expectations as in scope, and the RACI includes a "Restore & DRP testing" row, but no actual content exists. Missing: testing frequency, test methodology, what constitutes a passing test, and who signs off on the result.
+
+---
+
+### Medium priority gaps
+
+**5. "All Versions and Deletes" change feed mode not mentioned.**
+Section 8 states that change feed does not capture deletes by default and recommends soft delete + TTL as a workaround. Azure Cosmos DB now supports an "All Versions and Deletes" feed mode that natively captures deletes (including TTL expirations) with full metadata. The AAD should either incorporate this mode or explicitly state why it is not approved for AG workloads.
+
+**6. Indexing policy guidance is insufficient.**
+Section 7 states indexing policy "must be reviewed" for write-heavy or query-intensive workloads but gives no substance. Missing: what the default indexing policy covers, when to exclude paths to reduce write RU cost, when to add composite indexes, and who conducts the review and against what criteria.
+
+**7. Entra ID / RBAC role mapping absent.**
+Managed identity is mandated as the default access pattern, but the document does not map Cosmos DB built-in RBAC roles (e.g. Cosmos DB Built-in Data Reader, Cosmos DB Built-in Data Contributor) to access scenarios. Project teams have no guidance on which role to assign to which identity type.
+
+**8. Network setup details missing.**
+Private endpoints are mandatory but the document provides no guidance on implementation: private DNS zone configuration, VNet peering requirements, or alignment with the AG hub-spoke network model. Teams deploying their first Cosmos DB account need this to configure the network correctly.
+
+---
+
+### Lower priority gaps
+
+**9. Cost governance.**
+Cost is referenced in RU sizing (section 7) and as a P3 alert (section 9) but there is no dedicated cost governance guidance: no mention of Azure Cost Management integration, reserved capacity assessment, showback/chargeback model, or RU right-sizing review cadence beyond the RACI entry.
+
+**10. Decommissioning procedure.**
+Decommissioning appears in the RACI but has no associated content. Missing: required data exports before deletion, retention periods for exported data, approval steps for account deletion, and who executes the deletion.
+
+**11. RU estimation methodology.**
+Section 7 requires an RU estimate before production approval but provides no guidance on how to produce one — capacity calculator usage, benchmark testing approach, or load simulation expectations.
+
+**12. Out-of-scope APIs — no redirect.**
+MongoDB, Cassandra, Gremlin, Table, and PostgreSQL-compatible APIs are declared out of scope with no pointer to an alternative AAD or process. Teams needing those APIs have no direction.
