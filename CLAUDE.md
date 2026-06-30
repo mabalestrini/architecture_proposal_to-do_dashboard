@@ -16,7 +16,7 @@ The **network architecture principles** in `docs/network-principles/` are a stan
 
 ```
 docs/network-principles/   19 network principles — read-only inherited constraint
-docs/standards/            RA framework standards (naming, color, diagram, document template)
+docs/standards/            RA framework standards (naming, color, diagram, document template, AADs)
 docs/deliverables/         Project deliverables — fill these in (D0/D1/D2/D3 stubs)
 docs/templates/            Reusable slide and document templates
 docs/input/                Project source material — do not edit
@@ -54,6 +54,7 @@ scripts/                   extract_pptx_text.py utility
 - The canonical draw.io template is `diagrams/drawio/network_ra_template_V1.drawio`
 - Do not edit files in `docs/input/` — they are source material
 - Naming conventions are in `docs/standards/naming-standards.md` — follow them
+- AAD standards in `docs/standards/` define mandatory rules for approved technologies — any design using those technologies must comply
 
 ---
 
